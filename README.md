@@ -9,4 +9,4 @@ pip install flask
 ```
 python server.py
 ```
-### Website will noe be accessible on http://localhost:8000
+### Website will noe be accessible on http://localhost:5000
