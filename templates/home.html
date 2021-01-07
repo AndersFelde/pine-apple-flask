@@ -3,12 +3,41 @@
 
 
 {% block content %}
+<div class="container-md" style="margin-top:2%; display:block; height:100%;">
+    <div class="card text-light" style="background-color: black">
+        <h1 style="display:block; margin:auto;margin-top:3%">PineApple October Event 2020</h1>
+        <iframe id="eventVideo"
+            style="width:80%;height:600px;display:block; margin:auto;margin-top:1%;margin-bottom:3%;"
+            src="https://www.youtube.com/embed/1BHv5adMumM?controls=0" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <script>
+            var vid = document.getElementById("eventVideo");
+            vid.autoplay = true;
+            vid.load();
+        </script>
+        <!-- <div class="card-img-overlay text-center" style="margin-top: 2%">
+            <h5 class="card-title"> PinePhone X 2 Pro Max Mini 5G+</h5>
+            <a href="/PinePhone" class="badge badge-primary" style="font-size: medium;">Buy Now!</a>
+        </div> -->
+    </div>
+</div>
+<div class="container-sm" style="margin-top:5%">
+    <div class="card text-light" style="background-color: black">
+        <img src="/static/products/pineapple/ananas.png" class="card-img" alt="..."
+            style="display:block; width:70%;margin:auto;">
+        <div class="card-img-overlay text-center" style="margin-top: 7%">
+            <h1 class="card-title" style="color: white;">Unlike anything before</h1>
+            <a href="/PinePhone" class="badge badge-primary" style="font-size: medium;">Buy Now!</a>
+        </div>
+    </div>
+</div>
 <div class="container-sm" style="margin-top:5%">
     <div class="card text-light" style="background-color: black">
         <img src="/static/products/PinePhone/phone3.png" class="card-img" alt="..."
             style="display:block; margin:auto; width: 60%">
         <div class="card-img-overlay text-center" style="margin-top: 2%">
-            <h5 class="card-title"> PinePhone X 2 Pro Max Mini 5G+</h5>
+            <h1 class="card-title"> PinePhone X 2 Pro Max Mini 5G+</h1>
             <a href="/PinePhone" class="badge badge-primary" style="font-size: medium;">Buy Now!</a>
         </div>
     </div>
