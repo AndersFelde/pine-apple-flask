@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}PinePad{% endblock %}
 
 
 {% block content %}
+<input type="hidden" value="PinePad" id="active">
 <div class="container-md" style="margin-top:5%">
     <div class="card text-light" style="background-color: black;">
-        <img src="/static/products/PinePad.png" class="card-img" alt="...">
+        <img src="/static/products/PinePad.png" class="card-img" alt="..."
+            style="display:block;margin:auto;margin-top:5%;margin-bottom:5%;">
     </div>
 </div>
 <div class="container-md" style="margin-top:5%">
