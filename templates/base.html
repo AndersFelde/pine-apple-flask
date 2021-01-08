@@ -14,6 +14,25 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <link rel="icon" href="/static/icons/logo.png">
+    <style>
+        .smart-scroll {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
+        .scrolled-down {
+            transform: translateY(-100%);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .scrolled-up {
+            transform: translateY(0);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,4 +52,23 @@
         el = document.getElementById(id);
         el.style.color = "white";
     </script>
+    <script type="text/javascript">
+        $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+
+        // detect scroll top or down
+        if ($('.smart-scroll').length > 0) { // check if element exists
+            var last_scroll_top = 0;
+            $(window).on('scroll', function () {
+                scroll_top = $(this).scrollTop();
+                if (scroll_top < last_scroll_top) {
+                    $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+                }
+                else {
+                    $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+                }
+                last_scroll_top = scroll_top;
+            });
+        }
+    </script>
+
 </body>
